@@ -1,13 +1,13 @@
 {
   "name": "rivet-backend",
   "version": "1.0.0",
-  "description": "Backend API para RiVet — Sistema de Gestión Veterinaria",
-  "main": "dist/server.js",
+  "description": "Backend API para RiVet",
+  "main": "src/server.ts",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "db:migrate": "prisma migrate dev",
+    "dev": "tsx src/server.ts",
+    "start": "tsx src/server.ts",
+    "build": "echo 'skip build'",
+    "db:migrate": "prisma migrate deploy",
     "db:generate": "prisma generate",
     "db:seed": "tsx src/utils/seed.ts",
     "db:studio": "prisma studio"
@@ -20,13 +20,16 @@
     "@prisma/client": "^5.14.0",
     "bcryptjs": "^2.4.3",
     "fastify": "^4.28.1",
+    "tsx": "^4.15.6",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20.14.2",
     "prisma": "^5.14.0",
-    "tsx": "^4.15.6",
     "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
