@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Backend API para RiVet",
   "scripts": {
-    "build": "node node_modules/.bin/prisma generate",
+    "build": "npm install",
     "start": "node dist/server.js",
     "dev": "node node_modules/.bin/tsx src/server.ts",
     "db:migrate": "node node_modules/.bin/prisma migrate deploy",
