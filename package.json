@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Backend API para RiVet",
   "scripts": {
-    "build": "prisma generate && tsc --skipLibCheck --noEmit false",
-    "start": "node dist/server.js",
-    "dev": "tsx src/server.ts",
+    "build": "prisma generate",
+    "start": "node node_modules/.bin/tsx src/server.ts",
+    "dev": "node node_modules/.bin/tsx src/server.ts",
     "db:migrate": "prisma migrate deploy",
-    "db:seed": "node dist/utils/seed.js"
+    "db:seed": "node node_modules/.bin/tsx src/utils/seed.ts"
   },
   "dependencies": {
     "@fastify/cors": "^9.0.1",
