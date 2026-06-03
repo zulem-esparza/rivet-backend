@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Backend API para RiVet",
   "scripts": {
-    "build": "prisma generate",
+    "build": "node node_modules/.bin/prisma generate",
     "start": "node dist/server.js",
     "dev": "node node_modules/.bin/tsx src/server.ts",
-    "db:migrate": "prisma migrate deploy",
+    "db:migrate": "node node_modules/.bin/prisma migrate deploy",
     "db:seed": "node dist/utils/seed.js"
   },
   "dependencies": {
